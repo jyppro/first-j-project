@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+@keyframes swap {
+0% {opacity: 0;
+transform-origin: 0 100%;
+transform: scale(0, 0) translate(-700px, 0px);
+}
+
+100% {opacity: 1;
+transform-origin: 100% 100%;
+transform: scale(1, 1) translate(0px, 0px);
+}
+}
+@keyframes mod {
+0%{left: 0px;}
+50% {left: 610px;}
+100% {left: 1250px;}
+}
+ul {text-align: right;
+background-color: lightgray;
+list-style-type : none;}
+
+ul li {display: inline-block;
+list-style-type: none;
+padding: 0px 20px;}
+
+h1 {color: skyblue;
+font-style: italic;
+text-align: center;}
+
+span {color: orange;}
+
+footer {font-size: 83px;
+font-weight: bold;}
+
+.bb {background-color: #FFE400;
+display: inline;
+text-decoration: none;
+}
+.bb:hover {background-color: orange;}
+
+.xx {width: 50px;
+position:relative;
+left: 90px;
+bottom: 16px;}
+
+images {position: absolute;
+  padding-left: 45px;}
+
+.ok {
+top: 0px; left: 0px;
+width: 100px; height: 100px;
+padding-right: 70px;}
+
+div {display: inline-block;
+padding: 0px;
+width:170px;
+text-align: center;
+font-size: 25px;
+font-weight: bold;}
+
+.cc{padding-top: 55px;
+padding-left: 0px;
+animation-name: swap;
+animation-duration: 2s;}
+
+benner {display:block;
+background-color: #FFE08C;
+height: 500px;
+border-radius:50px;}
+
+video {position:relative;
+left:1000px;}
+
+model {position:absolute;
+display: inline-block;
+border-style: solid;
+border-color: orange;
+border-width: 17px;
+width:608px;
+height: 386px;
+top:500px;
+animation-name: mod;
+animation-duration: 6s;
+animation-delay: 2s;
+animation-iteration-count: infinite;}

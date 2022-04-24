@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>위치 검색(플레이스테이)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+  h2 {color : skyblue;
+  font-style : italic;}
+
+  span {color : orange;
+  font-style : italic;}
+
+img {padding-bottom: 50px;}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2><span>Play</span> Stay</h2>
+
+  <input class="form-control" id="myInput" type="text" value="우진여관" placeholder="search...">
+  <br>
+  <ul class="list-group" id="myList">
+    <li class="list-group-item">서울특별시 구로구 경인로 445</li>
+    <li class="list-group-item">삼익세라믹아파트</li>
+    <li class="list-group-item">서울특별시 관악구 관악로 1</li>
+    <li class="list-group-item">우진여관</li>
+  </ul>
+
+<img src="사진들/map.jpg" alt="지도이미지" class="map">
+
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
